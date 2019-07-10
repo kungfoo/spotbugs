@@ -273,12 +273,12 @@ public class SortedBugCollection implements BugCollection {
         } catch (IOException e) {
             throw newIOException(file, e);
         } catch (DocumentException e) {
-            throw new DocumentException("Failing reading " + file, e);
+            throw new DocumentException("Failed to read " + file, e);
         }
     }
 
     private static IOException newIOException(Object file, IOException e) {
-        IOException result = new IOException("Failing reading " + file);
+        IOException result = new IOException("Failed to read " + file);
         result.initCause(e);
         return result;
     }
@@ -291,7 +291,7 @@ public class SortedBugCollection implements BugCollection {
         } catch (IOException e) {
             throw newIOException(u, e);
         } catch (DocumentException e) {
-            throw new DocumentException("Failing reading " + u, e);
+            throw new DocumentException("Failed to read " + u, e);
         }
     }
 
